@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chuck's Favorite Movies</title>
-<!-- Style --->
   <style>
 body {
     font-family: Arial, sans-serif;
@@ -129,27 +128,25 @@ button.toggle-button:active {
 
 </style>
 
-<!-- Style --->
 </head>
 <body>
 <table>
 <caption><h2>Chuck's Top 100 Movies</h2></caption>
 <thead>
-
-    <tr>
-        <th>#</th>
-        <th>Title</th>
-        <th class="hide-on-phone">Year</th> <!-- Year column, shown on tablet and desktop -->
-        <th class="mobile-toggle-cell">Details</th>
-        <th class="hide-on-mobile">Plot</th>
-        <th class="hide-on-mobile">Cast</th>
-        <th class="hide-on-mobile">Director</th>
-        <th class="hide-on-mobile small-heading">Critic's Rating</th>
-        <th class="hide-on-mobile small-heading">My Rating</th>
-        <th class="hide-on-mobile">Poster</th>
-    </tr>
+<tr>
+    <th>#</th>
+    <th>Title</th>
+    <th class="hide-on-phone">Year</th>
+    <th class="mobile-toggle-cell">Details</th>
+    <th class="hide-on-mobile">Plot</th>
+    <th class="hide-on-mobile">Cast</th>
+    <th class="hide-on-mobile">Director</th>
+    <th class="hide-on-mobile small-heading">Critic's Rating</th>
+    <th class="hide-on-mobile small-heading">My Rating</th>
+    <th class="hide-on-mobile">Poster</th>
+</tr>
 </thead>
-<!-- Begin Scripted Code -->
+
 <!-- Movie 1 -->
 <tr class="mobile-row">
     <td>1</td>
@@ -4249,10 +4246,8 @@ button.toggle-button:active {
         </table>
     </td>
 </tr>
-   
-<!-- End   Scripted Code -->    
-</table>
 
+</table>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".toggle-button");
@@ -4268,10 +4263,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Hide all detail rows initially
     detailRows.forEach(row => row.style.display = "none");
 });
 </script>
-
 </body>
 </html>
+
