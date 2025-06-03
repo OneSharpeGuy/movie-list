@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Updated</title>
+</head>
+<body>
+    <h1>Last Updated Timestamp</h1>
+    <div id="last-updated">Loading...</div>
+    <script>
+        // Get the filename from the URL (e.g., ?file=top100.html)
+        const params = new URLSearchParams(window.location.search);
+        const file = params.get('file') || 'top100.html'; // Default to top100.html if no file is passed
+        
+        fetch(`https://api.github.com/repos/username/repository/commits?path=${file}`)
+          .then(response => response.json())
+          .then(data => {
+            if (data.length > 0) {
+              const lastCommitDate = data[0].commit.author.date;
+              document.getElementById('last-updated').innerHTML = `Last updated on: ${new Date(lastCommitDate).toLocaleString()}`;
+            } else {
+              document.getElementById('last-updated').innerHTML = `No commits found for ${file}.`;
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching commit data:', error);
+          });
+    </script>
+</body>
+</html>
