@@ -13,7 +13,7 @@
         const params = new URLSearchParams(window.location.search);
         const file = params.get('file') || 'top100.html'; // Default to top100.html if no file is passed
         
-        fetch(`https://api.github.com/repos/username/repository/commits?path=${file}`)
+        fetch(`https://api.github.com/repos/OneSharpeGuy/movie-list/commits?path=${file}`)
           .then(response => response.json())
           .then(data => {
             if (data.length > 0) {
