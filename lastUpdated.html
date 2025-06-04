@@ -15,32 +15,41 @@
       line-height: 1;
       overflow: hidden;
     }
-    #last-updated {
-      display: inline;
-      font-weight: bold;
-      white-space: nowrap;
+    #wrapper {
+      width: 100%;
       text-align: right;
+    }
+    #last-updated {
+      display: inline-block;
+      font-weight: normal;
+      white-space: nowrap;
     }
   </style>
 </head>
-<body><span id="last-updated">Loading...</span><script>
-  const params = new URLSearchParams(window.location.search);
-  const file = params.get('file') || 'Top100.html';
+<body>
+  <div id="wrapper">
+    <span id="last-updated">Loading...</span>
+  </div>
 
-  fetch(`https://api.github.com/repos/OneSharpeGuy/movie-list/commits?path=${file}`)
-    .then(response => response.json())
-    .then(data => {
-      const el = document.getElementById('last-updated');
-      if (data.length > 0) {
-        const lastCommitDate = data[0].commit.author.date;
-        el.textContent = `Last updated on: ${new Date(lastCommitDate).toLocaleString()}`;
-      } else {
-        el.textContent = `No commits found for ${file}.`;
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      document.getElementById('last-updated').textContent = 'Update timestamp unavailable.';
-    });
-</script></body>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file') || 'Top100.html';
+
+    fetch(`https://api.github.com/repos/OneSharpeGuy/movie-list/commits?path=${file}`)
+      .then(response => response.json())
+      .then(data => {
+        const el = document.getElementById('last-updated');
+        if (data.length > 0) {
+          const lastCommitDate = data[0].commit.author.date;
+          el.textContent = `Last updated on: ${new Date(lastCommitDate).toLocaleString()}`;
+        } else {
+          el.textContent = `No commits found for ${file}.`;
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('last-updated').textContent = 'Update timestamp unavailable.';
+      });
+  </script>
+</body>
 </html>
