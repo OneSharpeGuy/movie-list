@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Last Updated</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Last Updated</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      padding: 2em;
+    }
+    #last-updated {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 2em;
+    }
+    h1 {
+      text-align: right;
+      margin-bottom: 0;
+    }
+  </style>
 </head>
 <body>
-    <h1>Last Updated Timestamp</h1>
-    <div id="last-updated">Loading...</div>
-    <script>
-        // Get the filename from the URL (e.g., ?file=Top100.html)
-        const params = new URLSearchParams(window.location.search);
-        const file = params.get('file') || 'top100.html'; // Default to top100.html if no file is passed
-        
-fetch(`https://api.github.com/repos/OneSharpeGuy/movie-list/commits?path=${file}`)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data); // Log the response for debugging
-    if (data.length > 0) {
-      const lastCommitDate = data[0].commit.author.date;
-      document.getElementById('last-updated').innerHTML = `Last updated on: ${new Date(lastCommitDate).toLocaleString()}`;
-    } else {
-      document.getElementById('last-updated').innerHTML = `No commits found for ${file}.`;
-    }
-  })
-  .catch(error => {
-    console.error('Error fetching commit data:', error);
-  });
+  <h1>Last Updated Timestamp</h1>
+  <div id="last-updated">Loading...</div>
 
-    </script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file') || 'Top100.html';
+
+    fetch(`https://api.github.com/repos/OneSharpeGuy/movie-list/commits?path=${file}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.length > 0) {
+          const lastCommitDate = data[0].commit.author.date;
+          document.getElementById('last-updated').innerHTML =
+            `Last updated on: ${new Date(lastCommitDate).toLocaleString()}`;
+        } else {
+          document.getElementById('last-updated').innerHTML =
+            `No commits found for ${file}.`;
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching commit data:', error);
+        document.getElementById('last-updated').innerText =
+          'Error loading update timestamp.';
+      });
+  </script>
 </body>
 </html>
