@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chuck's Favorite Movies</title>
+  <style>
+body {
+    font-family: Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    backdrop-filter: blur(2px); /* Adds a subtle blur effect */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+th {
+    background: rgba(51, 51, 51, 0.8);
+    color: white;
+}
+
+td.description {
+    text-align: left;
+}
+
+/* Smaller font size for specific headers */
+.small-heading {
+    font-size: 12px;
+}
+
+/* Main Table Header sticky */
+thead th {
+    position: sticky;
+    top: 0;
+    background: rgba(51, 51, 51, 1);
+    z-index: 10;
+}
+
+img {
+    height: 150px;
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+img:hover {
+    transform: scale(1.2); /* Zoom in effect */
+}
+
+.mobile-toggle-cell {
+    display: none;
+}
+
+.mobile-details {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Mobile view: show toggle button, hide large-screen columns */
+@media screen and (max-width: 768px) {
+    .mobile-toggle-cell {
+        display: table-cell;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .toggle-row {
+        display: table-row;
+    }
+}
+
+/* Phone view only: hide specific columns (e.g. Year) */
+@media screen and (max-width: 480px) {
+    .hide-on-phone {
+        display: none;
+    }
+}
+
+.details-table th {
+    background: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 5px 10px;
+}
+
+.details-table td {
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.details-table img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.details-table img:hover {
+    transform: scale(1.1);
+}
+
+/* Windows 3D style toggle button */
+button.toggle-button {
+    background-color: #d4d0c8; /* Classic gray */
+    border: 2px solid #ffffff; /* Light border top/left */
+    border-right-color: #404040; /* Dark border right */
+    border-bottom-color: #404040; /* Dark border bottom */
+    padding: 4px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: #000000;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button.toggle-button:active {
+    border: 2px solid #404040; /* Dark border top/left */
+    border-right-color: #ffffff; /* Light border right */
+    border-bottom-color: #ffffff; /* Light border bottom */
+    background-color: #c0c0c0; /* Slightly darker pressed look */
+}
+
+</style>
+
+</head>
+<body>
+<table>
+<caption><h2>Chuck's Top 25 Movies (New York Times Style)</h2>
+      <span style="display: block; text-align: right; font-style: italic; font-weight: normal; font-size: smaller;">
+        Last Updated: 09/10/2025 11:56 AM
+      </span>
+    </caption>
+
+<thead>
+<tr>
+    <th>Rank</th>
+    <th>Title</th>
+    <th class="hide-on-phone">Year</th>
+    <th class="mobile-toggle-cell">Details</th>
+    <th class="hide-on-mobile">Plot</th>
+    <th class="hide-on-mobile">Cast</th>
+    <th class="hide-on-mobile">Director</th>
+    <th class="hide-on-mobile small-heading">Critic's Rating</th>
+    <th class="hide-on-mobile small-heading">My Rating</th>
+    <th class="hide-on-mobile">Poster</th>
+</tr>
+</thead>
+
+<!-- Movie 1 -->
+<tr class="mobile-row">
+    <td>1</td>
+    <td>Black Panther</td>
+    <td class="hide-on-phone">2018</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">T&#39;Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country&#39;s past.</td>
+    <td class="hide-on-mobile">Chadwick Boseman<br/> Michael B. Jordan<br/> Lupita Nyong'o</td>
+    <td class="hide-on-mobile">Ryan Coogler</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt1825683/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX300.jpg" alt="Black Panther Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">T&#39;Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country&#39;s past.</td></tr>
+            <tr><th>Cast:</th><td>Chadwick Boseman, Michael B. Jordan, Lupita Nyong'o</td></tr>
+            <tr><th>Director:</th><td>Ryan Coogler</td></tr>
+            <tr><th>Year:</th><td>2018</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt1825683/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX300.jpg" alt="Black Panther Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 2 -->
+<tr class="mobile-row">
+    <td>2</td>
+    <td>Million Dollar Baby</td>
+    <td class="hide-on-phone">2004</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">Frankie, an ill-tempered old coach, reluctantly agrees to train aspiring boxer Maggie. Impressed with her determination and talent, he helps her become the best and the two soon form a close bond.</td>
+    <td class="hide-on-mobile">Hilary Swank<br/> Clint Eastwood<br/> Morgan Freeman</td>
+    <td class="hide-on-mobile">Clint Eastwood</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0405159/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTkxNzA1NDQxOV5BMl5BanBnXkFtZTcwNTkyMTIzMw@@._V1_SX300.jpg" alt="Million Dollar Baby Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">Frankie, an ill-tempered old coach, reluctantly agrees to train aspiring boxer Maggie. Impressed with her determination and talent, he helps her become the best and the two soon form a close bond.</td></tr>
+            <tr><th>Cast:</th><td>Hilary Swank, Clint Eastwood, Morgan Freeman</td></tr>
+            <tr><th>Director:</th><td>Clint Eastwood</td></tr>
+            <tr><th>Year:</th><td>2004</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0405159/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTkxNzA1NDQxOV5BMl5BanBnXkFtZTcwNTkyMTIzMw@@._V1_SX300.jpg" alt="Million Dollar Baby Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 3 -->
+<tr class="mobile-row">
+    <td>3</td>
+    <td>Star Wars: Episode VII - The Force Awakens</td>
+    <td class="hide-on-phone">2015</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">As a new threat to the galaxy rises, Rey, a desert scavenger, and Finn, an ex-stormtrooper, must join Han Solo and Chewbacca to search for the one hope of restoring peace.</td>
+    <td class="hide-on-mobile">Daisy Ridley<br/> John Boyega<br/> Oscar Isaac</td>
+    <td class="hide-on-mobile">J.J. Abrams</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt2488496/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SX300.jpg" alt="Star Wars: Episode VII - The Force Awakens Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">As a new threat to the galaxy rises, Rey, a desert scavenger, and Finn, an ex-stormtrooper, must join Han Solo and Chewbacca to search for the one hope of restoring peace.</td></tr>
+            <tr><th>Cast:</th><td>Daisy Ridley, John Boyega, Oscar Isaac</td></tr>
+            <tr><th>Director:</th><td>J.J. Abrams</td></tr>
+            <tr><th>Year:</th><td>2015</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt2488496/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SX300.jpg" alt="Star Wars: Episode VII - The Force Awakens Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 4 -->
+<tr class="mobile-row">
+    <td>4</td>
+    <td>The Martian</td>
+    <td class="hide-on-phone">2015</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive and can survive until a potential rescue.</td>
+    <td class="hide-on-mobile">Matt Damon<br/> Jessica Chastain<br/> Kristen Wiig</td>
+    <td class="hide-on-mobile">Ridley Scott</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt3659388/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_SX300.jpg" alt="The Martian Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive and can survive until a potential rescue.</td></tr>
+            <tr><th>Cast:</th><td>Matt Damon, Jessica Chastain, Kristen Wiig</td></tr>
+            <tr><th>Director:</th><td>Ridley Scott</td></tr>
+            <tr><th>Year:</th><td>2015</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt3659388/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_SX300.jpg" alt="The Martian Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 5 -->
+<tr class="mobile-row">
+    <td>5</td>
+    <td>Django Unchained</td>
+    <td class="hide-on-phone">2012</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.</td>
+    <td class="hide-on-mobile">Jamie Foxx<br/> Christoph Waltz<br/> Leonardo DiCaprio</td>
+    <td class="hide-on-mobile">Quentin Tarantino</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt1853728/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg" alt="Django Unchained Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.</td></tr>
+            <tr><th>Cast:</th><td>Jamie Foxx, Christoph Waltz, Leonardo DiCaprio</td></tr>
+            <tr><th>Director:</th><td>Quentin Tarantino</td></tr>
+            <tr><th>Year:</th><td>2012</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt1853728/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg" alt="Django Unchained Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 6 -->
+<tr class="mobile-row">
+    <td>6</td>
+    <td>Edge of Tomorrow</td>
+    <td class="hide-on-phone">2014</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">A man fighting in a war against aliens must relive the same day every time he dies until he can find a way to stop their power source with the help of an elite soldier.</td>
+    <td class="hide-on-mobile">Tom Cruise<br/> Emily Blunt<br/> Bill Paxton</td>
+    <td class="hide-on-mobile">Doug Liman</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt1631867/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTc5OTk4MTM3M15BMl5BanBnXkFtZTgwODcxNjg3MDE@._V1_SX300.jpg" alt="Edge of Tomorrow Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">A man fighting in a war against aliens must relive the same day every time he dies until he can find a way to stop their power source with the help of an elite soldier.</td></tr>
+            <tr><th>Cast:</th><td>Tom Cruise, Emily Blunt, Bill Paxton</td></tr>
+            <tr><th>Director:</th><td>Doug Liman</td></tr>
+            <tr><th>Year:</th><td>2014</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt1631867/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTc5OTk4MTM3M15BMl5BanBnXkFtZTgwODcxNjg3MDE@._V1_SX300.jpg" alt="Edge of Tomorrow Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 7 -->
+<tr class="mobile-row">
+    <td>7</td>
+    <td>Akeelah and the Bee</td>
+    <td class="hide-on-phone">2006</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">Akeelah, a young gifted girl, comes from a dysfunctional family and is on the verge of quitting school. She discovers that she has a high aptitude for spellings and enters a spelling bee contest.</td>
+    <td class="hide-on-mobile">Angela Bassett<br/> Laurence Fishburne<br/> Keke Palmer</td>
+    <td class="hide-on-mobile">Doug Atchison</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0437800/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTUzMDIwNjIzM15BMl5BanBnXkFtZTcwNTczODQzMQ@@._V1_SX300.jpg" alt="Akeelah and the Bee Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">Akeelah, a young gifted girl, comes from a dysfunctional family and is on the verge of quitting school. She discovers that she has a high aptitude for spellings and enters a spelling bee contest.</td></tr>
+            <tr><th>Cast:</th><td>Angela Bassett, Laurence Fishburne, Keke Palmer</td></tr>
+            <tr><th>Director:</th><td>Doug Atchison</td></tr>
+            <tr><th>Year:</th><td>2006</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0437800/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTUzMDIwNjIzM15BMl5BanBnXkFtZTcwNTczODQzMQ@@._V1_SX300.jpg" alt="Akeelah and the Bee Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 8 -->
+<tr class="mobile-row">
+    <td>8</td>
+    <td>The Bourne Identity</td>
+    <td class="hide-on-phone">2002</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">A man is picked up by a fishing boat, bullet-riddled and suffering from amnesia, before racing to elude assassins and attempting to regain his memory.</td>
+    <td class="hide-on-mobile">Franka Potente<br/> Matt Damon<br/> Chris Cooper</td>
+    <td class="hide-on-mobile">Doug Liman</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0258463/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BYTk1ZTcyMWMtMWUxYS00MmEzLTlmODYtOTk1MGRjOTg1ZjlmXkEyXkFqcGc@._V1_SX300.jpg" alt="The Bourne Identity Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">A man is picked up by a fishing boat, bullet-riddled and suffering from amnesia, before racing to elude assassins and attempting to regain his memory.</td></tr>
+            <tr><th>Cast:</th><td>Franka Potente, Matt Damon, Chris Cooper</td></tr>
+            <tr><th>Director:</th><td>Doug Liman</td></tr>
+            <tr><th>Year:</th><td>2002</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0258463/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYTk1ZTcyMWMtMWUxYS00MmEzLTlmODYtOTk1MGRjOTg1ZjlmXkEyXkFqcGc@._V1_SX300.jpg" alt="The Bourne Identity Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 9 -->
+<tr class="mobile-row">
+    <td>9</td>
+    <td>Pirates of the Caribbean: The Curse of the Black Pearl</td>
+    <td class="hide-on-phone">2003</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">Blacksmith Will Turner teams up with eccentric pirate &quot;Captain&quot; Jack Sparrow to save Elizabeth Swann, the governor&#39;s daughter and his love, from Jack&#39;s former pirate allies, who are now undead.</td>
+    <td class="hide-on-mobile">Johnny Depp<br/> Geoffrey Rush<br/> Orlando Bloom</td>
+    <td class="hide-on-mobile">Gore Verbinski</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#189;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0325980/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BNDhlMzEyNzItMTA5Mi00YWRhLThlNTktYTQyMTA0MDIyNDEyXkEyXkFqcGc@._V1_SX300.jpg" alt="Pirates of the Caribbean: The Curse of the Black Pearl Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">Blacksmith Will Turner teams up with eccentric pirate &quot;Captain&quot; Jack Sparrow to save Elizabeth Swann, the governor&#39;s daughter and his love, from Jack&#39;s former pirate allies, who are now undead.</td></tr>
+            <tr><th>Cast:</th><td>Johnny Depp, Geoffrey Rush, Orlando Bloom</td></tr>
+            <tr><th>Director:</th><td>Gore Verbinski</td></tr>
+            <tr><th>Year:</th><td>2003</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#189;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0325980/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNDhlMzEyNzItMTA5Mi00YWRhLThlNTktYTQyMTA0MDIyNDEyXkEyXkFqcGc@._V1_SX300.jpg" alt="Pirates of the Caribbean: The Curse of the Black Pearl Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 10 -->
+<tr class="mobile-row">
+    <td>10</td>
+    <td>The Hateful Eight</td>
+    <td class="hide-on-phone">2015</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.</td>
+    <td class="hide-on-mobile">Samuel L. Jackson<br/> Kurt Russell<br/> Jennifer Jason Leigh</td>
+    <td class="hide-on-mobile">Quentin Tarantino</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#189;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt3460252/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjA1MTc1NTg5NV5BMl5BanBnXkFtZTgwOTM2MDEzNzE@._V1_SX300.jpg" alt="The Hateful Eight Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.</td></tr>
+            <tr><th>Cast:</th><td>Samuel L. Jackson, Kurt Russell, Jennifer Jason Leigh</td></tr>
+            <tr><th>Director:</th><td>Quentin Tarantino</td></tr>
+            <tr><th>Year:</th><td>2015</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#189;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt3460252/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjA1MTc1NTg5NV5BMl5BanBnXkFtZTgwOTM2MDEzNzE@._V1_SX300.jpg" alt="The Hateful Eight Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 11 -->
+<tr class="mobile-row">
+    <td>11</td>
+    <td>Bad Santa</td>
+    <td class="hide-on-phone">2003</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">A miserable conman and his partner pose as Santa and his Little Helper to rob department stores on Christmas Eve. But they run into problems when the conman befriends a troubled kid.</td>
+    <td class="hide-on-mobile">Billy Bob Thornton<br/> Bernie Mac<br/> Lauren Graham</td>
+    <td class="hide-on-mobile">Terry Zwigoff</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#189;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0307987/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjA4Njg1MDcwN15BMl5BanBnXkFtZTYwMzAxNjM3._V1_SX300.jpg" alt="Bad Santa Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">A miserable conman and his partner pose as Santa and his Little Helper to rob department stores on Christmas Eve. But they run into problems when the conman befriends a troubled kid.</td></tr>
+            <tr><th>Cast:</th><td>Billy Bob Thornton, Bernie Mac, Lauren Graham</td></tr>
+            <tr><th>Director:</th><td>Terry Zwigoff</td></tr>
+            <tr><th>Year:</th><td>2003</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#189;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0307987/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjA4Njg1MDcwN15BMl5BanBnXkFtZTYwMzAxNjM3._V1_SX300.jpg" alt="Bad Santa Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 12 -->
+<tr class="mobile-row">
+    <td>12</td>
+    <td>The Old Guard</td>
+    <td class="hide-on-phone">2020</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">A covert group of tight-knit mercenaries with an inability to die have fought to protect the world for centuries. But when their abilities are suddenly exposed, they need to eliminate the threat of those who seek to replicate thei...</td>
+    <td class="hide-on-mobile">Charlize Theron<br/> KiKi Layne<br/> Matthias Schoenaerts</td>
+    <td class="hide-on-mobile">Gina Prince-Bythewood</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#189;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt7556122/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BYzMwNjVjNTEtZDVhOC00NzQzLTg0MGYtMGI1Yzc0Nzg2MjNmXkEyXkFqcGc@._V1_SX300.jpg" alt="The Old Guard Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">A covert group of tight-knit mercenaries with an inability to die have fought to protect the world for centuries. But when their abilities are suddenly exposed, they need to eliminate the threat of those who seek to replicate thei...</td></tr>
+            <tr><th>Cast:</th><td>Charlize Theron, KiKi Layne, Matthias Schoenaerts</td></tr>
+            <tr><th>Director:</th><td>Gina Prince-Bythewood</td></tr>
+            <tr><th>Year:</th><td>2020</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#189;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt7556122/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYzMwNjVjNTEtZDVhOC00NzQzLTg0MGYtMGI1Yzc0Nzg2MjNmXkEyXkFqcGc@._V1_SX300.jpg" alt="The Old Guard Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 13 -->
+<tr class="mobile-row">
+    <td>13</td>
+    <td>Unbreakable</td>
+    <td class="hide-on-phone">2000</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">A man learns something extraordinary about himself after a devastating accident.</td>
+    <td class="hide-on-mobile">Bruce Willis<br/> Samuel L. Jackson<br/> Robin Wright</td>
+    <td class="hide-on-mobile">M. Night Shyamalan</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#189;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0217869/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BZWNmMGYwMDQtNGIxMS00MzMzLTlhNmItYzllN2M2M2EwMTZmXkEyXkFqcGc@._V1_SX300.jpg" alt="Unbreakable Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">A man learns something extraordinary about himself after a devastating accident.</td></tr>
+            <tr><th>Cast:</th><td>Bruce Willis, Samuel L. Jackson, Robin Wright</td></tr>
+            <tr><th>Director:</th><td>M. Night Shyamalan</td></tr>
+            <tr><th>Year:</th><td>2000</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#189;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9733;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0217869/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZWNmMGYwMDQtNGIxMS00MzMzLTlhNmItYzllN2M2M2EwMTZmXkEyXkFqcGc@._V1_SX300.jpg" alt="Unbreakable Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 14 -->
+<tr class="mobile-row">
+    <td>14</td>
+    <td>12 Years a Slave</td>
+    <td class="hide-on-phone">2013</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.</td>
+    <td class="hide-on-mobile">Chiwetel Ejiofor<br/> Michael Kenneth Williams<br/> Michael Fassbender</td>
+    <td class="hide-on-mobile">Steve McQueen</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt2024544/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_SX300.jpg" alt="12 Years a Slave Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.</td></tr>
+            <tr><th>Cast:</th><td>Chiwetel Ejiofor, Michael Kenneth Williams, Michael Fassbender</td></tr>
+            <tr><th>Director:</th><td>Steve McQueen</td></tr>
+            <tr><th>Year:</th><td>2013</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt2024544/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_SX300.jpg" alt="12 Years a Slave Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 15 -->
+<tr class="mobile-row">
+    <td>15</td>
+    <td>The Irishman</td>
+    <td class="hide-on-phone">2019</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">An illustration of Frank Sheeran&#39;s life, from W.W.II veteran to hit-man for the Bufalino crime family and his alleged assassination of his close friend Jimmy Hoffa.</td>
+    <td class="hide-on-mobile">Robert De Niro<br/> Al Pacino<br/> Joe Pesci</td>
+    <td class="hide-on-mobile">Martin Scorsese</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt1302006/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTY2YThkNmQtOWJhYy00ZDc3LWEzOGEtMmQwNzM0YjFmZWIyXkEyXkFqcGc@._V1_SX300.jpg" alt="The Irishman Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">An illustration of Frank Sheeran&#39;s life, from W.W.II veteran to hit-man for the Bufalino crime family and his alleged assassination of his close friend Jimmy Hoffa.</td></tr>
+            <tr><th>Cast:</th><td>Robert De Niro, Al Pacino, Joe Pesci</td></tr>
+            <tr><th>Director:</th><td>Martin Scorsese</td></tr>
+            <tr><th>Year:</th><td>2019</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt1302006/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTY2YThkNmQtOWJhYy00ZDc3LWEzOGEtMmQwNzM0YjFmZWIyXkEyXkFqcGc@._V1_SX300.jpg" alt="The Irishman Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 16 -->
+<tr class="mobile-row">
+    <td>16</td>
+    <td>The Departed</td>
+    <td class="hide-on-phone">2006</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.</td>
+    <td class="hide-on-mobile">Leonardo DiCaprio<br/> Matt Damon<br/> Jack Nicholson</td>
+    <td class="hide-on-mobile">Martin Scorsese</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0407887/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_SX300.jpg" alt="The Departed Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.</td></tr>
+            <tr><th>Cast:</th><td>Leonardo DiCaprio, Matt Damon, Jack Nicholson</td></tr>
+            <tr><th>Director:</th><td>Martin Scorsese</td></tr>
+            <tr><th>Year:</th><td>2006</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0407887/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_SX300.jpg" alt="The Departed Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 17 -->
+<tr class="mobile-row">
+    <td>17</td>
+    <td>Slumdog Millionaire</td>
+    <td class="hide-on-phone">2008</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">When a teenager from the slums of Mumbai is interrogated about his suspicious performance on a quiz show, he revisits various events from his past to explain how he knew all the answers.</td>
+    <td class="hide-on-mobile">Dev Patel<br/> Freida Pinto<br/> Saurabh Shukla</td>
+    <td class="hide-on-mobile">Danny Boyle<br/> Loveleen Tandan</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt1010048/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTE5ZTRkYWEtZmU5MC00NDJjLTk3NmUtZGJlYTM2MmQ3NTJkXkEyXkFqcGc@._V1_SX300.jpg" alt="Slumdog Millionaire Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">When a teenager from the slums of Mumbai is interrogated about his suspicious performance on a quiz show, he revisits various events from his past to explain how he knew all the answers.</td></tr>
+            <tr><th>Cast:</th><td>Dev Patel, Freida Pinto, Saurabh Shukla</td></tr>
+            <tr><th>Director:</th><td>Danny Boyle, Loveleen Tandan</td></tr>
+            <tr><th>Year:</th><td>2008</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt1010048/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTE5ZTRkYWEtZmU5MC00NDJjLTk3NmUtZGJlYTM2MmQ3NTJkXkEyXkFqcGc@._V1_SX300.jpg" alt="Slumdog Millionaire Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 18 -->
+<tr class="mobile-row">
+    <td>18</td>
+    <td>True Grit</td>
+    <td class="hide-on-phone">2010</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">A stubborn teenager enlists the help of a tough U.S. Marshal to track down her father&#39;s murderer.</td>
+    <td class="hide-on-mobile">Jeff Bridges<br/> Matt Damon<br/> Hailee Steinfeld</td>
+    <td class="hide-on-mobile">Ethan Coen<br/> Joel Coen</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt1403865/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTU5MjU3MTI4OF5BMl5BanBnXkFtZTcwMTQxOTAxNA@@._V1_SX300.jpg" alt="True Grit Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">A stubborn teenager enlists the help of a tough U.S. Marshal to track down her father&#39;s murderer.</td></tr>
+            <tr><th>Cast:</th><td>Jeff Bridges, Matt Damon, Hailee Steinfeld</td></tr>
+            <tr><th>Director:</th><td>Ethan Coen, Joel Coen</td></tr>
+            <tr><th>Year:</th><td>2010</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt1403865/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTU5MjU3MTI4OF5BMl5BanBnXkFtZTcwMTQxOTAxNA@@._V1_SX300.jpg" alt="True Grit Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 19 -->
+<tr class="mobile-row">
+    <td>19</td>
+    <td>American Fiction</td>
+    <td class="hide-on-phone">2023</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">A novelist who&#39;s fed up with the establishment profiting from Black entertainment uses a pen name to write a book that propels him into the heart of the hypocrisy and madness he claims to disdain.</td>
+    <td class="hide-on-mobile">Jeffrey Wright<br/> Tracee Ellis Ross<br/> John Ortiz</td>
+    <td class="hide-on-mobile">Cord Jefferson</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt23561236/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BM2I4ZTZhOTMtZDQ0Ni00MzI5LWE2YjktNzc0NjdkOGJiZjYzXkEyXkFqcGc@._V1_SX300.jpg" alt="American Fiction Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">A novelist who&#39;s fed up with the establishment profiting from Black entertainment uses a pen name to write a book that propels him into the heart of the hypocrisy and madness he claims to disdain.</td></tr>
+            <tr><th>Cast:</th><td>Jeffrey Wright, Tracee Ellis Ross, John Ortiz</td></tr>
+            <tr><th>Director:</th><td>Cord Jefferson</td></tr>
+            <tr><th>Year:</th><td>2023</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt23561236/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BM2I4ZTZhOTMtZDQ0Ni00MzI5LWE2YjktNzc0NjdkOGJiZjYzXkEyXkFqcGc@._V1_SX300.jpg" alt="American Fiction Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 20 -->
+<tr class="mobile-row">
+    <td>20</td>
+    <td>Minority Report</td>
+    <td class="hide-on-phone">2002</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">John works with the PreCrime police which stop crimes before they take place, with the help of three &#39;PreCogs&#39; who can foresee crimes. Events ensue when John finds himself framed for a future murder.</td>
+    <td class="hide-on-mobile">Tom Cruise<br/> Colin Farrell<br/> Samantha Morton</td>
+    <td class="hide-on-mobile">Steven Spielberg</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0181689/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BYTdmNzM3YzItZTRkYS00MTY5LTg4ZmItNjFmNTk2N2Q2NmNlXkEyXkFqcGc@._V1_SX300.jpg" alt="Minority Report Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">John works with the PreCrime police which stop crimes before they take place, with the help of three &#39;PreCogs&#39; who can foresee crimes. Events ensue when John finds himself framed for a future murder.</td></tr>
+            <tr><th>Cast:</th><td>Tom Cruise, Colin Farrell, Samantha Morton</td></tr>
+            <tr><th>Director:</th><td>Steven Spielberg</td></tr>
+            <tr><th>Year:</th><td>2002</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0181689/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYTdmNzM3YzItZTRkYS00MTY5LTg4ZmItNjFmNTk2N2Q2NmNlXkEyXkFqcGc@._V1_SX300.jpg" alt="Minority Report Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 21 -->
+<tr class="mobile-row">
+    <td>21</td>
+    <td>Kill Bill: Vol. 2</td>
+    <td class="hide-on-phone">2004</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">The Bride continues her quest of vengeance against her former boss and lover Bill, the reclusive bouncer Budd, and the treacherous, one-eyed Elle.</td>
+    <td class="hide-on-mobile">Uma Thurman<br/> David Carradine<br/> Michael Madsen</td>
+    <td class="hide-on-mobile">Quentin Tarantino</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0378194/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BY2FiNzhiZTctNzU1Mi00NDkwLWExNDMtZTg0MjYyNzhkNWNkXkEyXkFqcGc@._V1_SX300.jpg" alt="Kill Bill: Vol. 2 Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">The Bride continues her quest of vengeance against her former boss and lover Bill, the reclusive bouncer Budd, and the treacherous, one-eyed Elle.</td></tr>
+            <tr><th>Cast:</th><td>Uma Thurman, David Carradine, Michael Madsen</td></tr>
+            <tr><th>Director:</th><td>Quentin Tarantino</td></tr>
+            <tr><th>Year:</th><td>2004</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0378194/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BY2FiNzhiZTctNzU1Mi00NDkwLWExNDMtZTg0MjYyNzhkNWNkXkEyXkFqcGc@._V1_SX300.jpg" alt="Kill Bill: Vol. 2 Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 22 -->
+<tr class="mobile-row">
+    <td>22</td>
+    <td>Furiosa: A Mad Max Saga</td>
+    <td class="hide-on-phone">2024</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">The origin story of renegade warrior Furiosa before her encounter and teamup with Mad Max.</td>
+    <td class="hide-on-mobile">Anya Taylor-Joy<br/> Chris Hemsworth<br/> Tom Burke</td>
+    <td class="hide-on-mobile">George Miller</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt12037194/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BNTcwYWE1NTYtOWNiYy00NzY3LWIwY2MtNjJmZDkxNDNmOWE1XkEyXkFqcGc@._V1_SX300.jpg" alt="Furiosa: A Mad Max Saga Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">The origin story of renegade warrior Furiosa before her encounter and teamup with Mad Max.</td></tr>
+            <tr><th>Cast:</th><td>Anya Taylor-Joy, Chris Hemsworth, Tom Burke</td></tr>
+            <tr><th>Director:</th><td>George Miller</td></tr>
+            <tr><th>Year:</th><td>2024</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt12037194/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNTcwYWE1NTYtOWNiYy00NzY3LWIwY2MtNjJmZDkxNDNmOWE1XkEyXkFqcGc@._V1_SX300.jpg" alt="Furiosa: A Mad Max Saga Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 23 -->
+<tr class="mobile-row">
+    <td>23</td>
+    <td>Inside Man</td>
+    <td class="hide-on-phone">2006</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">A police detective, a bank robber, and a high-power broker enter high-stakes negotiations after the criminal&#39;s brilliant heist spirals into a hostage situation.</td>
+    <td class="hide-on-mobile">Denzel Washington<br/> Clive Owen<br/> Jodie Foster</td>
+    <td class="hide-on-mobile">Spike Lee</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0454848/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BZWFmMDZkYjktMjYyOS00MTM2LTg2MmQtOTUwMzJjMDlhZDY1XkEyXkFqcGc@._V1_SX300.jpg" alt="Inside Man Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">A police detective, a bank robber, and a high-power broker enter high-stakes negotiations after the criminal&#39;s brilliant heist spirals into a hostage situation.</td></tr>
+            <tr><th>Cast:</th><td>Denzel Washington, Clive Owen, Jodie Foster</td></tr>
+            <tr><th>Director:</th><td>Spike Lee</td></tr>
+            <tr><th>Year:</th><td>2006</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0454848/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZWFmMDZkYjktMjYyOS00MTM2LTg2MmQtOTUwMzJjMDlhZDY1XkEyXkFqcGc@._V1_SX300.jpg" alt="Inside Man Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 24 -->
+<tr class="mobile-row">
+    <td>24</td>
+    <td>Kill Bill: Vol. 1</td>
+    <td class="hide-on-phone">2003</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">After waking from a four-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.</td>
+    <td class="hide-on-mobile">Uma Thurman<br/> David Carradine<br/> Daryl Hannah</td>
+    <td class="hide-on-mobile">Quentin Tarantino</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0266697/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BZmMyYzJlZmYtY2I3NC00NjAyLTkyZWItZjdjZDI1YTYyYTEwXkEyXkFqcGc@._V1_SX300.jpg" alt="Kill Bill: Vol. 1 Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">After waking from a four-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.</td></tr>
+            <tr><th>Cast:</th><td>Uma Thurman, David Carradine, Daryl Hannah</td></tr>
+            <tr><th>Director:</th><td>Quentin Tarantino</td></tr>
+            <tr><th>Year:</th><td>2003</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0266697/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZmMyYzJlZmYtY2I3NC00NjAyLTkyZWItZjdjZDI1YTYyYTEwXkEyXkFqcGc@._V1_SX300.jpg" alt="Kill Bill: Vol. 1 Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<!-- Movie 25 -->
+<tr class="mobile-row">
+    <td>25</td>
+    <td>Collateral</td>
+    <td class="hide-on-phone">2004</td>    
+    <td class="mobile-toggle-cell">
+        <button class="toggle-button">Show More</button>
+    </td>
+    <td class="hide-on-mobile description">A cab driver finds himself the hostage of an engaging contract killer as he makes his rounds from hit to hit during one night in Los Angeles.</td>
+    <td class="hide-on-mobile">Tom Cruise<br/> Jamie Foxx<br/> Jada Pinkett Smith</td>
+    <td class="hide-on-mobile">Michael Mann</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+    <td class="hide-on-mobile">&#9733;&#9733;&#9733;&#9733;&#189;</td>
+    <td class="hide-on-mobile poster">
+        <a href="https://www.imdb.com/title/tt0369339/" target="_blank">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjE3NjM5OTMxMV5BMl5BanBnXkFtZTcwOTIzMTQyMw@@._V1_SX300.jpg" alt="Collateral Poster">
+        </a>
+    </td>
+</tr>
+<tr class="mobile-details">
+    <td colspan="8">
+        <table class="details-table">
+            <tr><th>Plot:</th><td class="description">A cab driver finds himself the hostage of an engaging contract killer as he makes his rounds from hit to hit during one night in Los Angeles.</td></tr>
+            <tr><th>Cast:</th><td>Tom Cruise, Jamie Foxx, Jada Pinkett Smith</td></tr>
+            <tr><th>Director:</th><td>Michael Mann</td></tr>
+            <tr><th>Year:</th><td>2004</td></tr>
+            <tr><th>Critics Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+            <tr><th>My Rating:</th><td>&#9733;&#9733;&#9733;&#9733;&#189;</td></tr>
+            <tr><th>Poster</th>
+                <td>
+                    <a href="https://www.imdb.com/title/tt0369339/" target="_blank">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjE3NjM5OTMxMV5BMl5BanBnXkFtZTcwOTIzMTQyMw@@._V1_SX300.jpg" alt="Collateral Poster">
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".toggle-button");
+    const detailRows = document.querySelectorAll(".mobile-details");
+
+    buttons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            const detailRow = detailRows[index];
+            const isVisible = detailRow.style.display === "table-row";
+
+            detailRow.style.display = isVisible ? "none" : "table-row";
+            button.textContent = isVisible ? "Show More" : "Show Less";
+        });
+    });
+
+    detailRows.forEach(row => row.style.display = "none");
+});
+</script>
+</body>
+</html>
+
